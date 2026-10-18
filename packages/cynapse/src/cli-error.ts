@@ -75,7 +75,7 @@ const DEFAULT_HELP: Record<string, string> = {
 
 /** For a throw cynapse did not raise on purpose, which is a bug rather than a bad call. */
 const BUG_HELP =
-	'this looks like a bug in cynapse; report it with the command you ran at https://github.com/cyberuni/cynapse/issues'
+	'this looks like a bug in cynapse; report it with the command you ran at https://github.com/spikyuni/cynapse/issues'
 
 /**
  * The suggested next step for any thrown value: the help a CynapseError carries, else its

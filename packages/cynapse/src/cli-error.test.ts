@@ -166,6 +166,6 @@ describe(helpFor.name, () => {
 	})
 
 	it('asks for a bug report on a throw cynapse did not raise on purpose', () => {
-		expect(helpFor(new Error('boom'))).toContain('github.com/cyberuni/cynapse/issues')
+		expect(helpFor(new Error('boom'))).toContain('github.com/spikyuni/cynapse/issues')
 	})
 })

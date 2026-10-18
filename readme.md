@@ -77,7 +77,7 @@ Copilot CLI.
 
 ```sh
 # Claude Code
-/plugin marketplace add cyberuni/cynapse
+/plugin marketplace add spikyuni/cynapse
 /plugin install cynapse
 ```
 

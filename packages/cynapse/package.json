@@ -4,7 +4,7 @@
 	"description": "A persisted communication network for agents — channels of immutable entries",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/cyberuni/cynapse.git"
+		"url": "https://github.com/spikyuni/cynapse.git"
 	},
 	"author": "unional <homawong@gmail.com>",
 	"license": "MIT",
