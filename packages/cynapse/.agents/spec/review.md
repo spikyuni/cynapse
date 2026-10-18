@@ -151,9 +151,11 @@ Issue #72 plans `subject`→`participant`, `kind`→`type`, `parent`→`anchor`,
 - Civitas links use `cyber-civitas.github.io`; the content now lives under `spikyuni.github.io`.
 - cyberlegion and cyberfleet link `cyberuni/cynapse` issues (#30, #60, #75).
 
-**Decided (owner):** the org is `spikyuni`. Still open: the npm scope of the GUI package (`@cyberuni/cynapse-gui` today) and the cyberlegion and cyberfleet links.
+**Decided (owner):** the org is `spikyuni`, the GUI package is `@spikyuni/cynapse-gui`, and the ADR links change too.
 
-**Recommend.** Fix links in one pass. GitHub redirects keep old issue links working after a transfer, so only code and docs need the edit.
+**Done in this repo** (`b459e3f`, then the link commit): package scope, code, tests, seed data, docs, ADRs and research notes now say `spikyuni/cynapse`. Left as history: the two `CHANGELOG.md` files. The docs site package `@cyberuni/web` was not renamed.
+
+**Still open.** Links in cyberlegion, cyberfleet and civitas still say `cyberuni/cynapse`, and civitas links use `cyber-civitas.github.io`. The old `@cyberuni/cynapse-gui` name, if it was ever published, needs deprecating on npm. GitHub redirects keep old issue links working after a transfer, so only code and docs need the edit.
 
 ### <a id="i10"></a>I10. Stale status text (low)
 
