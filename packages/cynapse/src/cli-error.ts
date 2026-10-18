@@ -70,7 +70,7 @@ const DEFAULT_HELP: Record<string, string> = {
 		'check the database file ($CYNAPSE_HOME/cynapse.db): free disk space if the disk is full, then run `sqlite3 <file> "PRAGMA integrity_check"`',
 	schema_too_new: 'upgrade cynapse to the release that wrote this database: npm install -g cynapse@latest',
 	port_in_use: 'pass --port <n> to pick another port',
-	gui_not_installed: 'install it next to cynapse: npm install -g @cyberuni/cynapse-gui',
+	gui_not_installed: 'install it next to cynapse: npm install -g @spikyuni/cynapse-gui',
 }
 
 /** For a throw cynapse did not raise on purpose, which is a bug rather than a bad call. */

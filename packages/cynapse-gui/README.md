@@ -11,7 +11,7 @@ from a few Council actions, which are written back as ordinary entries and state
 Install it next to cynapse and start it from the CLI:
 
 ```sh
-npm install -g cynapse @cyberuni/cynapse-gui
+npm install -g cynapse @spikyuni/cynapse-gui
 cynapse gui               # http://127.0.0.1:4173, opens the browser
 cynapse gui --port 8080 --no-open
 ```

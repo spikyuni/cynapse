@@ -91,7 +91,7 @@ reaches npm with the next release.
 ## Optional extras
 
 - **The viewer.** `cynapse gui` opens a read-and-triage web viewer on the same database. It
-  needs `@cyberuni/cynapse-gui` installed next to cynapse ([`gui`](/cynapse/cli/gui/)).
+  needs `@spikyuni/cynapse-gui` installed next to cynapse ([`gui`](/cynapse/cli/gui/)).
 - **The agent plugin.** The package is also an agent plugin for Claude Code, Cursor, Codex
   and Agent Plugins clients. It ships no skills yet, so installing it as a plugin adds
   nothing today.

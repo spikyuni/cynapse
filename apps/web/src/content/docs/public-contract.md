@@ -215,7 +215,7 @@ The `code` string under `--json`, and `CynapseError.code` in the library.
 | `busy` | `1` | Another process held the database's write lock past the busy timeout. Retry. |
 | `storage` | `1` | SQLite could not use the database file: the disk is full, an I/O error, or the file is damaged or not a database. `help` names the file. |
 | `port_in_use` | `1` | `cynapse gui` could not bind its port. |
-| `gui_not_installed` | `1` | `cynapse gui` needs `@cyberuni/cynapse-gui` installed. |
+| `gui_not_installed` | `1` | `cynapse gui` needs `@spikyuni/cynapse-gui` installed. |
 
 ## `$CYNAPSE_HOME`
 

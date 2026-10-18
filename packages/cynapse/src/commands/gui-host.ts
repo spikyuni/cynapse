@@ -3,9 +3,9 @@
 import { spawn } from 'node:child_process'
 import type { Store } from '../store/types.js'
 
-export const GUI_PACKAGE = '@cyberuni/cynapse-gui'
+export const GUI_PACKAGE = '@spikyuni/cynapse-gui'
 
-/** The contract `@cyberuni/cynapse-gui` exports. */
+/** The contract `@spikyuni/cynapse-gui` exports. */
 export interface GuiModule {
 	start(options: { store: Store; port?: number }): Promise<{ url: string; close(): Promise<void> }>
 }

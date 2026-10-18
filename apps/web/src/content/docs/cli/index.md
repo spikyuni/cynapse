@@ -117,7 +117,7 @@ The `code` is the contract; the `message` and `help` are for people and agents t
 | `busy` | `1` | Another process held the database's write lock for longer than the 10 s busy timeout. Retry the command. |
 | `storage` | `1` | SQLite could not use the database file: the disk is full, an I/O error, or the file is damaged or not a database. `help` names the file and the check to run; don't retry until it passes. |
 | `port_in_use` | `1` | `cynapse gui` can't bind its port. Pass `--port`. |
-| `gui_not_installed` | `1` | `cynapse gui` can't find `@cyberuni/cynapse-gui`. |
+| `gui_not_installed` | `1` | `cynapse gui` can't find `@spikyuni/cynapse-gui`. |
 | `invalid_token` | `1` | `changes --since` got something that isn't a change token. Call `changes` without `--since`. |
 | `foreign_token` | `1` | The change token came from another database. Call `changes` without `--since`. |
 | `timeout` | `3` | `entry wait` saw no reply within `--timeout`. Wait again, or give up. |

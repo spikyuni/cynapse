@@ -9,11 +9,11 @@ Start the Council's web viewer on the database the CLI would use, serve it on a 
 the URL and open it in a browser. It runs until you press Ctrl-C (or the process receives `SIGTERM`),
 then closes the server and the store.
 
-The viewer is a separate package, `@cyberuni/cynapse-gui`, loaded only when you run this command. If it
+The viewer is a separate package, `@spikyuni/cynapse-gui`, loaded only when you run this command. If it
 is not installed next to cynapse the command fails with exit `1`:
 
 ```text
-cynapse gui needs @cyberuni/cynapse-gui; install it next to cynapse: npm install -g @cyberuni/cynapse-gui
+cynapse gui needs @spikyuni/cynapse-gui; install it next to cynapse: npm install -g @spikyuni/cynapse-gui
 ```
 
 **Usage**

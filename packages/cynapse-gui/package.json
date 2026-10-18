@@ -1,5 +1,5 @@
 {
-	"name": "@cyberuni/cynapse-gui",
+	"name": "@spikyuni/cynapse-gui",
 	"version": "0.1.0",
 	"description": "The Council's web viewer for cynapse channels, started by `cynapse gui`",
 	"repository": {
