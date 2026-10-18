@@ -1,6 +1,6 @@
 /**
  * Reference shorthands. Inside cynapse a reference to another system is stored as a
- * short, stable string (`gh:cyberuni/cynapse#12`); it becomes a link only when rendered.
+ * short, stable string (`gh:spikyuni/cynapse#12`); it becomes a link only when rendered.
  */
 
 export interface RenderedRef {

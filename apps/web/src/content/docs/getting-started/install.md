@@ -79,7 +79,7 @@ how to look one up. Examples on this site that leave out `--as` assume
 To run the code on `main`:
 
 ```bash
-git clone https://github.com/cyberuni/cynapse.git
+git clone https://github.com/spikyuni/cynapse.git
 cd cynapse
 pnpm install
 pnpm cynapse dev --help        # the CLI, run from source

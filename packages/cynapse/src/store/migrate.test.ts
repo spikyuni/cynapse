@@ -244,9 +244,9 @@ describe('the owner-membership migration', () => {
 		const path = join(dir, 'v5-owners.db')
 		const before = new SqliteStore({ path })
 		before.createChannel({
-			handle: 'gh:cyberuni/cynapse',
+			handle: 'gh:spikyuni/cynapse',
 			type: 'cynapse.repo',
-			title: 'cyberuni/cynapse',
+			title: 'spikyuni/cynapse',
 			author: 'legion',
 			subject: { store: 'gh', nativeId: 'R_kgDOPfmJ6A' },
 			kind: 'address',
@@ -263,13 +263,13 @@ describe('the owner-membership migration', () => {
 
 		const store = new SqliteStore({ path })
 		try {
-			expect(store.getChannel('gh:cyberuni/cynapse')?.members).toEqual([
+			expect(store.getChannel('gh:spikyuni/cynapse')?.members).toEqual([
 				{ participant: 'unional', role: 'owner', cursor: 0 },
 			])
 			expect(store.getChannel('auth')?.members).toEqual([])
-			const joined = store.entries('gh:cyberuni/cynapse', { types: ['cynapse.member.joined'] })
+			const joined = store.entries('gh:spikyuni/cynapse', { types: ['cynapse.member.joined'] })
 			expect(joined).toMatchObject([{ seq: 2, author: 'legion', data: { participant: 'unional', role: 'owner' } }])
-			expect(store.unread('unional')).toEqual([expect.objectContaining({ handle: 'gh:cyberuni/cynapse' })])
+			expect(store.unread('unional')).toEqual([expect.objectContaining({ handle: 'gh:spikyuni/cynapse' })])
 		} finally {
 			store.close()
 		}

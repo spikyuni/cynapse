@@ -27,7 +27,7 @@ most of the network around it is designed and not yet built. Status as of Octobe
 | The briefing, `channel show` | Built | [Channels](/cynapse/concepts/channels/#the-briefing) |
 | Conditional append (a "happens at most once" write), `appendUnless` | Built, in the library only | [Store](/cynapse/api/store/#appendunlessref-input-unless) |
 | Deleting an entry or a channel, with tombstones | Built (ADR-0014), added after 0.1.0 | [Entries](/cynapse/concepts/entries/#deleting-an-entry) |
-| Editing an entry | Proposed ([#62](https://github.com/cyberuni/cynapse/issues/62)) | [Entries](/cynapse/concepts/entries/#immutability) |
+| Editing an entry | Proposed ([#62](https://github.com/spikyuni/cynapse/issues/62)) | [Entries](/cynapse/concepts/entries/#immutability) |
 | Leases | Accepted, not built | [State and lifecycle](/cynapse/concepts/state-and-lifecycle/#leases-planned) |
 | Distilled view as the default once reconciled; retention | Accepted, not built | [State and lifecycle](/cynapse/concepts/state-and-lifecycle/#cleanup-is-a-state-not-a-deletion) |
 
@@ -54,7 +54,7 @@ most of the network around it is designed and not yet built. Status as of Octobe
 | The change token, `changes` | Built (ADR-0013) | [Messaging](/cynapse/concepts/messaging/#knowing-that-something-arrived) |
 | Owner-only `cynapse.handled` on address channels | Built (ADR-0013) | [Messaging](/cynapse/concepts/messaging/#seen-versus-handled) |
 | The boundary with a runtime | Accepted (ADR-0013). It says what stays with the runtime, so cynapse has nothing to build for it | [cynapse and the runtime](/cynapse/design/runtime/) |
-| Reference shorthand such as `gh:cyberuni/cynapse#12` | Built as free-form text rendered as a link | [Refs](/cynapse/api/refs/) |
+| Reference shorthand such as `gh:spikyuni/cynapse#12` | Built as free-form text rendered as a link | [Refs](/cynapse/api/refs/) |
 | Subjects and relations across stores | Accepted, not built (ADR-0010) | [What cynapse stores](/cynapse/design/scope/#a-network-of-subjects) |
 | Guide and compose; write-back; `cynapse.published` | Accepted, not built (ADR-0011) | [What cynapse stores](/cynapse/design/scope/#guide-and-compose) |
 | Routing kinds, prefixed conventions, `init-cynapse`, stamps | Accepted, not built (ADR-0008) | [Decisions](/cynapse/design/decisions/) |

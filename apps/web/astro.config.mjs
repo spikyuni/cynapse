@@ -27,7 +27,7 @@ export default defineConfig({
 				{
 					icon: 'github',
 					label: 'GitHub',
-					href: 'https://github.com/cyberuni/cynapse',
+					href: 'https://github.com/spikyuni/cynapse',
 				},
 			],
 			// Describe and teach first, then reference; the design history comes last.
@@ -117,7 +117,7 @@ export default defineConfig({
 				},
 			],
 			editLink: {
-				baseUrl: 'https://github.com/cyberuni/cynapse/edit/main/apps/web/',
+				baseUrl: 'https://github.com/spikyuni/cynapse/edit/main/apps/web/',
 			},
 		}),
 	],

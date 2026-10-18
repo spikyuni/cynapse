@@ -5,9 +5,9 @@ description: "The one-home rule: what cynapse keeps, what it leaves to other sto
 
 :::note[Partly built]
 The store for channels, entries, cursors and state is built, and so are channels keyed by
-subject. The network of subjects ([ADR-0010](https://github.com/cyberuni/cynapse/blob/main/docs/adr/0010-a-network-of-subjects-across-stores.md)),
-guidance, composition and write-back ([ADR-0011](https://github.com/cyberuni/cynapse/blob/main/docs/adr/0011-cynapse-stores-only-what-no-other-store-can.md))
-are accepted, not built. Today a reference such as `gh:cyberuni/cynapse#12` is stored as
+subject. The network of subjects ([ADR-0010](https://github.com/spikyuni/cynapse/blob/main/docs/adr/0010-a-network-of-subjects-across-stores.md)),
+guidance, composition and write-back ([ADR-0011](https://github.com/spikyuni/cynapse/blob/main/docs/adr/0011-cynapse-stores-only-what-no-other-store-can.md))
+are accepted, not built. Today a reference such as `gh:spikyuni/cynapse#12` is stored as
 written and rendered as a link.
 :::
 
@@ -108,6 +108,6 @@ conversation through the CLI's narrow reads, never by searching files
 ## Related
 
 - [Subjects and channel kinds](/cynapse/concepts/subjects/): channels keyed by subject.
-- Decisions: [ADR-0002](https://github.com/cyberuni/cynapse/blob/main/docs/adr/0002-own-only-communication-with-no-other-home.md),
-  [ADR-0010](https://github.com/cyberuni/cynapse/blob/main/docs/adr/0010-a-network-of-subjects-across-stores.md),
-  [ADR-0011](https://github.com/cyberuni/cynapse/blob/main/docs/adr/0011-cynapse-stores-only-what-no-other-store-can.md)
+- Decisions: [ADR-0002](https://github.com/spikyuni/cynapse/blob/main/docs/adr/0002-own-only-communication-with-no-other-home.md),
+  [ADR-0010](https://github.com/spikyuni/cynapse/blob/main/docs/adr/0010-a-network-of-subjects-across-stores.md),
+  [ADR-0011](https://github.com/spikyuni/cynapse/blob/main/docs/adr/0011-cynapse-stores-only-what-no-other-store-can.md)

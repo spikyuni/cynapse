@@ -60,7 +60,7 @@ describe('cynapse channel', () => {
 			'--member',
 			'bob:reviewer',
 			'--context',
-			'gh:cyberuni/cynapse#12',
+			'gh:spikyuni/cynapse#12',
 			'--convention',
 			'sdd.ledger',
 		)
@@ -69,12 +69,12 @@ describe('cynapse channel', () => {
 			handle: 'auth',
 			purpose: 'ship login',
 			members: [{ participant: 'bob', role: 'reviewer', cursor: 0 }],
-			context: ['gh:cyberuni/cynapse#12'],
+			context: ['gh:spikyuni/cynapse#12'],
 			conventions: ['sdd.ledger'],
 			stats: { unread: 3 },
 		})
 		expect(await cli('channel', 'show', 'auth')).toContain(
-			'context: [cyberuni/cynapse#12](https://github.com/cyberuni/cynapse/issues/12)',
+			'context: [spikyuni/cynapse#12](https://github.com/spikyuni/cynapse/issues/12)',
 		)
 	})
 
@@ -99,11 +99,11 @@ describe('cynapse channel, keyed by subject', () => {
 			'legion',
 			'channel',
 			'create',
-			'gh:cyberuni/cynapse',
+			'gh:spikyuni/cynapse',
 			'--type',
 			'cynapse.repo',
 			'--title',
-			'cyberuni/cynapse',
+			'spikyuni/cynapse',
 			...repo,
 			'--kind',
 			'address',
@@ -116,14 +116,14 @@ describe('cynapse channel, keyed by subject', () => {
 		const created = await createRepo()
 		expect(created).toMatchObject({
 			id: channelIdOf({ store: 'gh', nativeId: 'R_kgDOPfmJ6A' }),
-			handle: 'gh:cyberuni/cynapse',
+			handle: 'gh:spikyuni/cynapse',
 			kind: 'address',
 			owner: 'unional',
 			subjects: [{ store: 'gh', nativeId: 'R_kgDOPfmJ6A' }],
 		})
 		expect((await createRepo()).id).toBe(created.id)
 		expect((await json('channel', 'list', '--kind', 'address')).count).toBe(1)
-		expect(await cli('channel', 'show', 'gh:cyberuni/cynapse')).toContain('address of unional')
+		expect(await cli('channel', 'show', 'gh:spikyuni/cynapse')).toContain('address of unional')
 	})
 
 	it('defaults to a work channel keyed by its subject', async () => {
@@ -132,7 +132,7 @@ describe('cynapse channel, keyed by subject', () => {
 			'alice',
 			'channel',
 			'create',
-			'gh:cyberuni/cynapse/issues/12',
+			'gh:spikyuni/cynapse/issues/12',
 			'--type',
 			'sdd.mission',
 			'--title',
@@ -167,7 +167,7 @@ describe('cynapse channel, keyed by subject', () => {
 
 	it('resolves a channel by store and native id, including an alias key', async () => {
 		const created = await createRepo()
-		await cli('--as', 'unional', 'channel', 'add-key', 'gh:cyberuni/cynapse', '--store', 'gh', '--native-id', 'R_moved')
+		await cli('--as', 'unional', 'channel', 'add-key', 'gh:spikyuni/cynapse', '--store', 'gh', '--native-id', 'R_moved')
 		const found = await json('channel', 'resolve', '--store', 'gh', '--native-id', 'R_moved')
 		expect(found.id).toBe(created.id)
 		await expect(cli('channel', 'resolve', '--store', 'gh', '--native-id', 'R_none')).rejects.toMatchObject({
@@ -177,7 +177,7 @@ describe('cynapse channel, keyed by subject', () => {
 
 	it('changes the owner of an address channel', async () => {
 		await createRepo()
-		const logged = await json('--as', 'unional', 'channel', 'owner', 'gh:cyberuni/cynapse', 'bob')
+		const logged = await json('--as', 'unional', 'channel', 'owner', 'gh:spikyuni/cynapse', 'bob')
 		expect(logged).toMatchObject({ type: 'cynapse.channel.owner-changed', data: { from: 'unional', to: 'bob' } })
 	})
 
@@ -209,7 +209,7 @@ describe('cynapse entry', () => {
 			'--body',
 			'use JWT',
 			'--ref',
-			'gh:cyberuni/cynapse#12',
+			'gh:spikyuni/cynapse#12',
 			'--tag',
 			'sdd.risk',
 			'--data',
@@ -217,7 +217,7 @@ describe('cynapse entry', () => {
 		)
 		expect(appended).toMatchObject({ seq: 2, tags: ['sdd.risk'], data: { choice: 'jwt' } })
 		const shown = await json('entry', 'show', 'auth#2')
-		expect(shown.links[0].url).toBe('https://github.com/cyberuni/cynapse/issues/12')
+		expect(shown.links[0].url).toBe('https://github.com/spikyuni/cynapse/issues/12')
 		expect(await cli('entry', 'show', 'auth#2')).toContain('use JWT')
 	})
 

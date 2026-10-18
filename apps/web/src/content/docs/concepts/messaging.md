@@ -111,4 +111,4 @@ to the runtime, which decides. See [Guarantees](/cynapse/concepts/guarantees/#ch
 - [Use the CLI](/cynapse/guides/cli/) and [Use the library](/cynapse/guides/library/): the
   flow end to end.
 - [cynapse and the runtime](/cynapse/design/runtime/): who owns waking, liveness and claims.
-- Decision: [ADR-0013](https://github.com/cyberuni/cynapse/blob/main/docs/adr/0013-messaging-between-participants.md)
+- Decision: [ADR-0013](https://github.com/spikyuni/cynapse/blob/main/docs/adr/0013-messaging-between-participants.md)

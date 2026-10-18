@@ -54,26 +54,26 @@ or a reconciled channel's summary, reach a repository. See
 ## The rules
 
 1. **cynapse stores only what no other store can.** Everything else stays where it lives,
-   and cynapse refers to it as `gh:cyberuni/cynapse#12`
-   ([ADR-0011](https://github.com/cyberuni/cynapse/blob/main/docs/adr/0011-cynapse-stores-only-what-no-other-store-can.md)).
+   and cynapse refers to it as `gh:spikyuni/cynapse#12`
+   ([ADR-0011](https://github.com/spikyuni/cynapse/blob/main/docs/adr/0011-cynapse-stores-only-what-no-other-store-can.md)).
 2. **cynapse holds no credentials and never calls a store.** Auth, rate limits and APIs stay
    with the consumer (ADR-0011).
 3. **Entries never change.** An edit, a retraction or a later tag is a new entry. Every
    metadata change is written as an entry too
-   ([ADR-0003](https://github.com/cyberuni/cynapse/blob/main/docs/adr/0003-entry-identity-and-order.md)).
+   ([ADR-0003](https://github.com/spikyuni/cynapse/blob/main/docs/adr/0003-entry-identity-and-order.md)).
 4. **Each channel has one order owner.** `seq` is arrival order with no gaps: SQLite's write
    transaction on one machine, the hub beyond it
-   ([ADR-0007](https://github.com/cyberuni/cynapse/blob/main/docs/adr/0007-stock-sqlite-outside-the-repository.md)).
+   ([ADR-0007](https://github.com/spikyuni/cynapse/blob/main/docs/adr/0007-stock-sqlite-outside-the-repository.md)).
 5. **A channel is keyed by its subject, with no type in the key.** Everyone working on #12
    meets in #12's one channel
-   ([ADR-0012](https://github.com/cyberuni/cynapse/blob/main/docs/adr/0012-channels-are-keyed-by-subject.md)).
+   ([ADR-0012](https://github.com/spikyuni/cynapse/blob/main/docs/adr/0012-channels-are-keyed-by-subject.md)).
 6. **Hierarchy is a view, not identity.** Relations live on the subjects, never in channel
    structure
-   ([ADR-0010](https://github.com/cyberuni/cynapse/blob/main/docs/adr/0010-a-network-of-subjects-across-stores.md)).
+   ([ADR-0010](https://github.com/spikyuni/cynapse/blob/main/docs/adr/0010-a-network-of-subjects-across-stores.md)).
 7. **A message goes on the channel of what it is about.** Work traffic on the work
    channel, direct traffic on the addressee's address channel. cynapse never wakes anyone;
    the dependency runs one way, from the runtime to cynapse
-   ([ADR-0013](https://github.com/cyberuni/cynapse/blob/main/docs/adr/0013-messaging-between-participants.md)).
+   ([ADR-0013](https://github.com/spikyuni/cynapse/blob/main/docs/adr/0013-messaging-between-participants.md)).
 8. **Raw conversation stays out of repositories.** Agents reach it through narrow CLI reads,
    never by searching files (ADR-0007).
 

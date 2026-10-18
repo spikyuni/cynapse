@@ -79,4 +79,4 @@ cynapse --as alice channel create coord-x --type coord.channel --title "x agents
 ## Related
 
 - CLI: [`tag`](/cynapse/cli/tag/), [`entry list`](/cynapse/cli/entry/)
-- Decision: [ADR-0005](https://github.com/cyberuni/cynapse/blob/main/docs/adr/0005-consumer-defined-types-tags-and-traits.md)
+- Decision: [ADR-0005](https://github.com/spikyuni/cynapse/blob/main/docs/adr/0005-consumer-defined-types-tags-and-traits.md)

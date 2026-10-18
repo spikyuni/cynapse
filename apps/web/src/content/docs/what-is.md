@@ -45,7 +45,7 @@ limits, such as one machine and one writer at a time.
 
 - **It doesn't track work.** Issues, tasks and pull requests stay in GitHub, Asana, Linear
   or beads. cynapse holds the conversation about them, and refers to them as strings such
-  as `gh:cyberuni/cynapse#12`.
+  as `gh:spikyuni/cynapse#12`.
 - **It doesn't call other systems.** It holds no credentials and makes no network calls.
 - **It doesn't push or wake anyone.** Readers poll. A runtime decides whom to wake.
 - **It doesn't span machines.** One store is one file on one host. Sync through a hub is

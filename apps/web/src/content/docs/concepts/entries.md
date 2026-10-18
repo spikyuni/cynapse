@@ -49,13 +49,13 @@ is a `cynapse.label` entry, and an entry's current tags are folded from those
 ([Types, tags and traits](/cynapse/concepts/types-tags-traits/)). Whatever an entry said
 when it was read is what it still says, unless it was deleted.
 
-Editing an entry in place is not built. [#62](https://github.com/cyberuni/cynapse/issues/62)
+Editing an entry in place is not built. [#62](https://github.com/spikyuni/cynapse/issues/62)
 proposes it as an append that reads fold.
 
 ## Deleting an entry
 
 Deleting removes what was said and keeps its place
-([ADR-0014](https://github.com/cyberuni/cynapse/blob/main/docs/adr/0014-deleting-entries-and-channels.md)).
+([ADR-0014](https://github.com/spikyuni/cynapse/blob/main/docs/adr/0014-deleting-entries-and-channels.md)).
 It was added after 0.1.0. `deleteEntry` (`cynapse entry delete`) erases an entry's body,
 data, refs and tags and leaves a **tombstone**: the `id`, `seq`, author, type, `parent` and
 `root` stay, and the entry carries `deleted: { at, by }`. The delete is logged as a
@@ -101,7 +101,7 @@ A parent must be in the same channel. A conversation lives in the channel where 
 | `author` | The participant who wrote it. |
 | `body` | Markdown for people and agents to read. |
 | `data` | A JSON object whose shape `type` defines. |
-| `refs` | Reference shorthands (`gh:cyberuni/cynapse#12`), rendered as links when shown. |
+| `refs` | Reference shorthands (`gh:spikyuni/cynapse#12`), rendered as links when shown. |
 | `parent`, `root` | The thread it belongs to. |
 
 `--meta-only` reads headers without `body` and `data`, so an agent can scan a long ledger
@@ -123,5 +123,5 @@ There is no way to read backwards from the end, by time range, or by the text of
 
 - CLI: [`entry`](/cynapse/cli/entry/), [`tag`](/cynapse/cli/tag/)
 - API: [`Store`](/cynapse/api/store/), [ids](/cynapse/api/ids/)
-- Decisions: [ADR-0003](https://github.com/cyberuni/cynapse/blob/main/docs/adr/0003-entry-identity-and-order.md),
-  [ADR-0014](https://github.com/cyberuni/cynapse/blob/main/docs/adr/0014-deleting-entries-and-channels.md)
+- Decisions: [ADR-0003](https://github.com/spikyuni/cynapse/blob/main/docs/adr/0003-entry-identity-and-order.md),
+  [ADR-0014](https://github.com/spikyuni/cynapse/blob/main/docs/adr/0014-deleting-entries-and-channels.md)

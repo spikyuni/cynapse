@@ -7,9 +7,9 @@ import './diagram.css'
 const rows = [
 	{
 		y: 60,
-		subject: 'cyberuni/cynapse',
+		subject: 'spikyuni/cynapse',
 		subjectNote: 'a repository',
-		channel: 'gh:cyberuni/cynapse',
+		channel: 'gh:spikyuni/cynapse',
 		kind: 'ADDRESS CHANNEL',
 		owner: 'owner: the repository’s owner',
 	},
@@ -17,7 +17,7 @@ const rows = [
 		y: 140,
 		subject: 'issue #12',
 		subjectNote: 'closed-by: #15',
-		channel: 'gh:cyberuni/cynapse/12',
+		channel: 'gh:spikyuni/cynapse/12',
 		kind: 'WORK CHANNEL',
 		owner: 'members, no owner',
 	},
@@ -25,7 +25,7 @@ const rows = [
 		y: 220,
 		subject: 'PR #15',
 		subjectNote: 'closes: #12',
-		channel: 'gh:cyberuni/cynapse/15',
+		channel: 'gh:spikyuni/cynapse/15',
 		kind: 'WORK CHANNEL',
 		owner: 'members, no owner',
 	},
@@ -36,7 +36,7 @@ const rows = [
 	<svg viewBox="0 0 760 400" role="img" aria-labelledby="subjects-title subjects-desc">
 		<title id="subjects-title">Channels keyed by subject</title>
 		<desc id="subjects-desc">
-			In GitHub, the repository cyberuni/cynapse, issue 12 and PR 15 are subjects. The
+			In GitHub, the repository spikyuni/cynapse, issue 12 and PR 15 are subjects. The
 			relation "PR 15 closes issue 12" is recorded on both subjects. In cynapse, each subject
 			keys one channel by UUIDv5 of its native ID: the repository an address channel with an
 			owner, the issue and the PR a work channel each, with members and no owner. A

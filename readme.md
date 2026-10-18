@@ -16,7 +16,7 @@ agents (such as arbitration), coordination, leases and presence, and read state.
 tracking stays in GitHub, Asana, Linear or beads, and agents use those directly; cynapse
 tells them what to fetch and composes what they pass back, such as a change feed across
 stores. It holds no credentials and never calls those services. cynapse refers to them by
-reference shorthand (`gh:cyberuni/cynapse#12`). Channels are keyed by the subject they are
+reference shorthand (`gh:spikyuni/cynapse#12`). Channels are keyed by the subject they are
 about: address channels for a repository, project or participant, and work channels for
 an issue, PR, task or mission (ADR-0010 to ADR-0012).
 
@@ -50,9 +50,9 @@ entries too. The store is stock SQLite at `$CYNAPSE_HOME/cynapse.db` (default
 ```sh
 cynapse --json <command>          # structured output on every command
 cynapse --as alice channel create auth --type sdd.mission --title "Add auth" \
-  --member bob:reviewer --context gh:cyberuni/cynapse#12
+  --member bob:reviewer --context gh:spikyuni/cynapse#12
 cynapse --as bob channel show auth  # the briefing: purpose, members, context, state, pinned, stats
-cynapse --as alice entry append auth --type sdd.decision --body "Use JWT" --ref gh:cyberuni/cynapse#12
+cynapse --as alice entry append auth --type sdd.decision --body "Use JWT" --ref gh:spikyuni/cynapse#12
 cynapse --as bob entry list auth --unread --meta-only
 cynapse entry show auth#2
 cynapse --as bob read auth         # advance the read cursor

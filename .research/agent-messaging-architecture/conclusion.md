@@ -48,7 +48,7 @@ their changes. Instead it:
   back. A change feed across stores is composed when it is read and never stored.
 
 Messages refer to outside things by reference. Inside cynapse a reference is stored as a
-shorthand (`gh:cyberuni/cynapse#12`). When posted out, it renders as a Markdown link or a
+shorthand (`gh:spikyuni/cynapse#12`). When posted out, it renders as a Markdown link or a
 bare URL, whichever the platform supports.
 
 ### Structure: a network of subjects across stores

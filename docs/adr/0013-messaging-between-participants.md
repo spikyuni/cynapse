@@ -2,7 +2,7 @@
 
 ## Status
 
-Accepted, 2026-10-04. Answers [#30](https://github.com/cyberuni/cynapse/issues/30).
+Accepted, 2026-10-04. Answers [#30](https://github.com/spikyuni/cynapse/issues/30).
 
 Built: the schema version and forward migrations; ADR-0012's key scheme and address
 channels; `excludeTags` and `excludeAuthors` in `ViewFilter`, followed threads in `unread`,
@@ -80,7 +80,7 @@ that participant's address channel. There is no mailbox, and no DM, as ADR-0012 
 Most of what a runtime sends between sessions is about a work item: a brief, the reports
 on it, the decisions made on it, a notice that trunk moved under it. None of that is
 person-to-person. It goes on the **work channel** keyed by that item (ADR-0012), such as
-the channel of `gh:cyberuni/cynapse#30`. The sender and the recipient are both members, so
+the channel of `gh:spikyuni/cynapse#30`. The sender and the recipient are both members, so
 a reply reaches both through their own `unread`, and whoever joins the work later reads the
 whole exchange in one place.
 
@@ -208,7 +208,7 @@ does not arise.
 **9. Project addressing. Fits ADR-0012 directly. The runtime resolves the native ID;
 cynapse owns the key built from it.** A repository's address channel is keyed by its
 store's native ID, such as a GitHub repository's `node_id`, and its handle is the readable
-reference (`gh:cyberuni/cynapse`).
+reference (`gh:spikyuni/cynapse`).
 Two checkouts of one repository resolve the same `node_id`, so they derive the same
 `UUIDv5`, and `createChannel` with an existing key is a no-op. The channel's UUID is the
 opaque key other tools use. Resolving the remote to a `node_id` needs the store's API, so
@@ -372,4 +372,4 @@ cynapse shows a runtime's claims as state records.
 ## Related
 
 - [ADR-0002](0002-own-only-communication-with-no-other-home.md), [ADR-0003](0003-entry-identity-and-order.md), [ADR-0004](0004-stream-identity-handles-and-anchors.md), [ADR-0005](0005-consumer-defined-types-tags-and-traits.md), [ADR-0006](0006-state-views-and-lifecycle.md), [ADR-0007](0007-stock-sqlite-outside-the-repository.md), [ADR-0011](0011-cynapse-stores-only-what-no-other-store-can.md), [ADR-0012](0012-channels-are-keyed-by-subject.md).
-- Issue [#30](https://github.com/cyberuni/cynapse/issues/30), and [cyberuni/cyberlegion#20](https://github.com/cyberuni/cyberlegion/issues/20).
+- Issue [#30](https://github.com/spikyuni/cynapse/issues/30), and [cyberuni/cyberlegion#20](https://github.com/cyberuni/cyberlegion/issues/20).

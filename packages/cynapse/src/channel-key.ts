@@ -3,7 +3,7 @@ import { uuidv5 } from './ids.js'
 
 /**
  * A subject's identity in the store that holds it (ADR-0012): GitHub's `node_id`, Asana's
- * `gid`, Linear's UUID. Not the readable reference (`gh:cyberuni/cynapse`), which changes
+ * `gid`, Linear's UUID. Not the readable reference (`gh:spikyuni/cynapse`), which changes
  * when the subject is renamed; that is the channel's handle.
  */
 export interface SubjectId {

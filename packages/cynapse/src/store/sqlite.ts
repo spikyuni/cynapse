@@ -1469,7 +1469,7 @@ function readToken(token: string, store: string): number {
 
 function validateHandle(handle: string): void {
 	// `#` separates a handle from a seq in a short reference, and a handle shaped like a
-	// UUID would shadow a channel id. `:` lets a readable reference (`gh:cyberuni/cynapse`)
+	// UUID would shadow a channel id. `:` lets a readable reference (`gh:spikyuni/cynapse`)
 	// be the handle of its subject's channel.
 	if (!/^[a-z0-9][a-z0-9._/:-]*$/i.test(handle) || isUuid(handle)) {
 		throw new CynapseError(`"${handle}" is not a valid channel handle (letters, digits, . _ / : -)`)

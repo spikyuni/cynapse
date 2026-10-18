@@ -12,7 +12,7 @@ no second structure for mail, threads or DMs.
 
 Many participants write to a channel and read from it. Earlier design records call it a
 *stream*. The name was changed because "stream" suggests one-way flow
-([ADR-0009](https://github.com/cyberuni/cynapse/blob/main/docs/adr/0009-call-the-stream-a-channel.md)).
+([ADR-0009](https://github.com/spikyuni/cynapse/blob/main/docs/adr/0009-call-the-stream-a-channel.md)).
 
 <ChannelDiagram />
 
@@ -98,7 +98,7 @@ channel. It returns:
 - the channel: handle, aliases, type, title, purpose, parent anchor, traits, lifecycle
   state, stats;
 - members, each with their role and cursor;
-- context: reference shorthands such as `gh:cyberuni/cynapse#12`, rendered as links;
+- context: reference shorthands such as `gh:spikyuni/cynapse#12`, rendered as links;
 - open [state records](/cynapse/concepts/state-and-lifecycle/): pending answers,
   needs-input;
 - pinned entries;
@@ -119,5 +119,5 @@ and the consumer's type picks them. See
 
 - CLI: [`channel`](/cynapse/cli/channel/)
 - API: [`Store`](/cynapse/api/store/)
-- Decisions: [ADR-0004](https://github.com/cyberuni/cynapse/blob/main/docs/adr/0004-stream-identity-handles-and-anchors.md),
-  [ADR-0012](https://github.com/cyberuni/cynapse/blob/main/docs/adr/0012-channels-are-keyed-by-subject.md)
+- Decisions: [ADR-0004](https://github.com/spikyuni/cynapse/blob/main/docs/adr/0004-stream-identity-handles-and-anchors.md),
+  [ADR-0012](https://github.com/spikyuni/cynapse/blob/main/docs/adr/0012-channels-are-keyed-by-subject.md)

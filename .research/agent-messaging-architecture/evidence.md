@@ -2926,7 +2926,7 @@ Confidence: high
 
 Source:
 - Label: cynapse PR #16 load test (`cynapse dev load-test`)
-- URL: https://github.com/cyberuni/cynapse/pull/16
+- URL: https://github.com/spikyuni/cynapse/pull/16
 - Type: direct test
 - Fetched: yes
 
@@ -3002,7 +3002,7 @@ Source:
 - Fetched: GitHub yes; others no
 
 Notes:
-- GitHub: one `gh api graphql` call turns `owner/name#n` into the `node_id` and returns the body, labels, parent and sub-issues, linked PRs, and `timelineItems(since:)`. Ran on cyberuni/cynapse issue #20 and PRs #8 and #12; it cost 1 rate-limit point. The timeline needs each event type listed, returns at most 100 items per call, and a body edit leaves no event.
+- GitHub: one `gh api graphql` call turns `owner/name#n` into the `node_id` and returns the body, labels, parent and sub-issues, linked PRs, and `timelineItems(since:)`. Ran on spikyuni/cynapse issue #20 and PRs #8 and #12; it cost 1 rate-limit point. The timeline needs each event type listed, returns at most 100 items per call, and a body edit leaves no event.
 - GitLab: one `glab api graphql` call by full path and iid returns the global ID, labels, blocking counts, related MRs and notes. Notes have no `since`. Moving an issue creates a new issue.
 - Linear: `issue(id:)` accepts an identifier or a UUID. Relations, parent, children, history and comments come back in one query, but history and comments have no `since`. There is no first-party CLI.
 - Asana: `cyber-asana task get <gid> --opt-fields …` returns metadata and parent, subtask and dependency stubs. Comment history (stories) is a separate endpoint with no `since`.

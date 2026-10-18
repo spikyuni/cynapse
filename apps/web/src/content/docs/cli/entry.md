@@ -43,7 +43,7 @@ cynapse entry append <channel> --type <type> [options]
 ```bash
 cynapse --as sdd-conductor entry append notes-2 \
   --type demo.note --body "Cutting the release branch." \
-  --tag demo.status --ref gh:cyberuni/cynapse#12
+  --tag demo.status --ref gh:spikyuni/cynapse#12
 # appended notes-2#6  01a10a46-3873-70bd-95f6-6cead5578080
 ```
 

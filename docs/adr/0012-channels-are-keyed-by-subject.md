@@ -20,7 +20,7 @@ conversation about one unit of work: an SDD mission, a GitHub issue, a PR under 
 ADR-0004 derives a channel's ID from a natural key, such as a DM's set of participants.
 In the prototype the key is a free string, and creating a channel with an existing key but
 a different type fails with `id_conflict`. Readable references such as
-`gh:cyberuni/cynapse#12` aren't stable: an issue transferred to another repository changes
+`gh:spikyuni/cynapse#12` aren't stable: an issue transferred to another repository changes
 its number and repository, and a Linear issue moved to another team changes its
 identifier. Native IDs aren't fully stable either. A GitHub issue transfer issues a new
 `node_id`, and the old one stops resolving (LC12). A GitLab move creates a new issue (LC13).
@@ -40,7 +40,7 @@ A store's native ID survives a rename, but not a move.
     way, only the decisions are distilled into the repository (cyberuni/cyber-truss#36).
 - **The key is the subject's native ID when the channel is created,** not its readable
   reference: GitHub's `node_id`, Asana's `gid`, Linear's UUID. The readable reference
-  (`gh:cyberuni/cynapse#12`) is a handle. A folder has no stable ID outside cynapse, so
+  (`gh:spikyuni/cynapse#12`) is a handle. A folder has no stable ID outside cynapse, so
   cynapse registers an address for it, because cynapse owns addressing.
 - **A move adds an alias key; the channel keeps its identity.** When a subject moves and
   its store gives it a new native ID, the new ID becomes an alias key of the same channel,

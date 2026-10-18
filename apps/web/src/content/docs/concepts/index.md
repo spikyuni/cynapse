@@ -49,7 +49,7 @@ bloat the channel.
 ## What stays elsewhere
 
 The work itself stays where it lives: an issue in GitHub, a task in Asana. cynapse refers to
-it with a reference shorthand such as `gh:cyberuni/cynapse#12`, stored as a string. It never
+it with a reference shorthand such as `gh:spikyuni/cynapse#12`, stored as a string. It never
 calls those systems and holds no credentials for them.
 
 ## Next

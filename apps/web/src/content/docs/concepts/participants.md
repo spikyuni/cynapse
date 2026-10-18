@@ -110,7 +110,7 @@ cynapse records the participant each call names and doesn't verify it
 
 ## Registration
 
-[ADR-0013](https://github.com/cyberuni/cynapse/blob/main/docs/adr/0013-messaging-between-participants.md)
+[ADR-0013](https://github.com/spikyuni/cynapse/blob/main/docs/adr/0013-messaging-between-participants.md)
 makes the participant a first-class record with a history ([`cynapse participant`](/cynapse/cli/participant/)):
 
 - **A runtime registers its participants.** `registerParticipant({ key, kind, name, registeredBy })`,
@@ -157,4 +157,4 @@ These are not settled. Each one waits on a use case that would decide it.
 
 - CLI: [global options](/cynapse/cli/) (`--as`), [`participant`](/cynapse/cli/participant/), [`channel create`](/cynapse/cli/channel/)
 - API: [`Participant`, `Member`](/cynapse/api/types/), [`Store`](/cynapse/api/store/)
-- Issue: [#30](https://github.com/cyberuni/cynapse/issues/30)
+- Issue: [#30](https://github.com/spikyuni/cynapse/issues/30)

@@ -82,7 +82,7 @@ const entry = store.append('release-1.0', {
   type: 'demo.note',
   body: 'Cutting the release branch.',
   tags: ['demo.status'],
-  refs: ['gh:cyberuni/cynapse#12'],
+  refs: ['gh:spikyuni/cynapse#12'],
 })
 console.log(`${entry.channel}#${entry.seq}`, entry.id)
 // release-1.0#3 01a10a48-099a-70e9-9b4c-bc294e541315
@@ -123,5 +123,5 @@ There is no sync or hub in the library yet. They are designed but not built.
 
 - [Store](/cynapse/api/store/): the `Store` interface, method by method.
 - [Types](/cynapse/api/types/): `Channel`, `Entry`, `Member`, `ChannelTraits`, `Anchor`, and the rest.
-- [Refs](/cynapse/api/refs/): rendering reference shorthands such as `gh:cyberuni/cynapse#12`.
+- [Refs](/cynapse/api/refs/): rendering reference shorthands such as `gh:spikyuni/cynapse#12`.
 - [Ids and errors](/cynapse/api/ids/): UUIDs, subject keys, `CynapseError` and the exit-code constants.

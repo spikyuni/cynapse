@@ -69,7 +69,7 @@ interface Channel {
   purpose?: string
   parent?: Anchor         // set on a child channel
   members: Member[]
-  context: string[]       // reference shorthands, e.g. 'gh:cyberuni/cynapse#12'
+  context: string[]       // reference shorthands, e.g. 'gh:spikyuni/cynapse#12'
   traits: ChannelTraits
   state: string           // the lifecycle state: 'active', 'paused', 'reconciled', ...; 'deleted' after deleteChannel
   pinned: number[]        // seqs of the pinned entries

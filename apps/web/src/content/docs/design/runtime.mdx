@@ -5,7 +5,7 @@ description: "Where cynapse stops and a runtime such as cyberlegion starts: who 
 
 import MessageFlowDiagram from '../../../components/MessageFlowDiagram.astro'
 
-This page describes [ADR-0013](https://github.com/cyberuni/cynapse/blob/main/docs/adr/0013-messaging-between-participants.md),
+This page describes [ADR-0013](https://github.com/spikyuni/cynapse/blob/main/docs/adr/0013-messaging-between-participants.md),
 which is accepted and built.
 
 A **runtime** launches and manages agent sessions. cyberlegion is the first; any unit that
@@ -35,7 +35,7 @@ DM.
   is about a work item: a brief, the reports on it, the decisions made on it, a notice
   that trunk moved under it. It goes on that item's
   [work channel](/cynapse/concepts/subjects/), such as the
-  channel of `gh:cyberuni/cynapse#30`. Sender and recipient are both members, so a reply
+  channel of `gh:spikyuni/cynapse#30`. Sender and recipient are both members, so a reply
   reaches both through their own `unread`, and whoever joins the work later reads the whole
   exchange in one place.
 - **Direct traffic goes on the address channel.** A question to a role, mail for a durable
@@ -118,4 +118,4 @@ in `0.1.0`:
 - [Messaging](/cynapse/concepts/messaging/): the mechanics on each kind of channel.
 - [Participants](/cynapse/concepts/participants/#registration): the registration
   surface.
-- Issue [#30](https://github.com/cyberuni/cynapse/issues/30), the ten needs this answers.
+- Issue [#30](https://github.com/spikyuni/cynapse/issues/30), the ten needs this answers.

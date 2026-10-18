@@ -29,9 +29,9 @@ const issue = { store: 'gh', nativeId: 'I_kwDOPfmJ6M7AAAAB' }
 
 function repoAddress(owner = 'unional') {
 	return store.createChannel({
-		handle: 'gh:cyberuni/cynapse',
+		handle: 'gh:spikyuni/cynapse',
 		type: 'cynapse.repo',
-		title: 'cyberuni/cynapse',
+		title: 'spikyuni/cynapse',
 		author: 'legion',
 		subject: repo,
 		kind: 'address',
@@ -49,14 +49,14 @@ describe('channels keyed by subject', () => {
 
 	it('is a no-op for a second consumer opening the same subject, whatever type it perceives', () => {
 		const first = store.createChannel({
-			handle: 'gh:cyberuni/cynapse/issues/12',
+			handle: 'gh:spikyuni/cynapse/issues/12',
 			type: 'sdd.mission',
 			title: 'Add auth',
 			author: 'alice',
 			subject: issue,
 		})
 		const second = store.createChannel({
-			handle: 'gh:cyberuni/cynapse/issues/12',
+			handle: 'gh:spikyuni/cynapse/issues/12',
 			type: 'truss.run',
 			title: 'Auth work',
 			author: 'bob',
@@ -74,8 +74,8 @@ describe('channels keyed by subject', () => {
 	})
 
 	it('accepts a readable reference with a colon as the handle', () => {
-		expect(repoAddress().handle).toBe('gh:cyberuni/cynapse')
-		expect(store.getChannel('gh:cyberuni/cynapse')?.id).toBe(channelIdOf(repo))
+		expect(repoAddress().handle).toBe('gh:spikyuni/cynapse')
+		expect(store.getChannel('gh:spikyuni/cynapse')?.id).toBe(channelIdOf(repo))
 	})
 
 	it('refuses a free-string key in the reserved subject: form', () => {
@@ -102,8 +102,8 @@ describe('channel kind and owner', () => {
 
 	it('round-trips an address channel and its owner', () => {
 		repoAddress()
-		expect(store.getChannel('gh:cyberuni/cynapse')).toMatchObject({ kind: 'address', owner: 'unional' })
-		expect(store.listChannels({ kind: 'address' }).map((c) => c.handle)).toEqual(['gh:cyberuni/cynapse'])
+		expect(store.getChannel('gh:spikyuni/cynapse')).toMatchObject({ kind: 'address', owner: 'unional' })
+		expect(store.listChannels({ kind: 'address' }).map((c) => c.handle)).toEqual(['gh:spikyuni/cynapse'])
 		expect(store.listChannels({ kind: 'work' })).toEqual([])
 	})
 
@@ -137,7 +137,7 @@ describe('channel kind and owner', () => {
 		expect(
 			captureError(() =>
 				store.createChannel({
-					handle: 'gh:cyberuni/cynapse',
+					handle: 'gh:spikyuni/cynapse',
 					type: 'cynapse.repo',
 					title: 'x',
 					author: 'a',
@@ -170,9 +170,9 @@ describe('channel kind and owner', () => {
 
 	it('adds the owner once, as owner, when members also lists it', () => {
 		const channel = store.createChannel({
-			handle: 'gh:cyberuni/cynapse',
+			handle: 'gh:spikyuni/cynapse',
 			type: 'cynapse.repo',
-			title: 'cyberuni/cynapse',
+			title: 'spikyuni/cynapse',
 			author: 'legion',
 			subject: repo,
 			kind: 'address',
@@ -201,7 +201,7 @@ describe('channel kind and owner', () => {
 	it('lists an address channel in its owner’s unread', () => {
 		const channel = repoAddress()
 		store.append(channel.id, { author: 'bob', type: 'demo.ask', body: 'Can you review the fix today?' })
-		expect(store.unread('unional')).toEqual([{ channelId: channel.id, handle: 'gh:cyberuni/cynapse', count: 3 }])
+		expect(store.unread('unional')).toEqual([{ channelId: channel.id, handle: 'gh:spikyuni/cynapse', count: 3 }])
 	})
 
 	it('makes the new owner a member with role owner and the old owner a plain member', () => {
@@ -238,7 +238,7 @@ describe('alias keys', () => {
 
 	function issueChannel() {
 		return store.createChannel({
-			handle: 'gh:cyberuni/cynapse/issues/12',
+			handle: 'gh:spikyuni/cynapse/issues/12',
 			type: 'sdd.mission',
 			title: 'Add auth',
 			author: 'alice',
@@ -261,7 +261,7 @@ describe('alias keys', () => {
 		const channel = issueChannel()
 		store.addSubject(channel.id, moved, 'alice')
 		const reopened = store.createChannel({
-			handle: 'gh:cyberuni/cynapse/issues/12',
+			handle: 'gh:spikyuni/cynapse/issues/12',
 			type: 'sdd.mission',
 			title: 'Add auth',
 			author: 'bob',

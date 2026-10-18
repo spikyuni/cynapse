@@ -49,7 +49,7 @@ function send(body: string, extra: { parent?: string; tags?: string[] } = {}) {
 		type: 'cyberlegion.mail',
 		body,
 		data: { secret: body },
-		refs: ['gh:cyberuni/cynapse#60'],
+		refs: ['gh:spikyuni/cynapse#60'],
 		...extra,
 	})
 }

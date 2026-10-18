@@ -72,7 +72,7 @@ fails leaves no channel and no members behind, so it can be retried.
 cynapse --as sdd-conductor channel create demo-notes \
   --type demo.notes --title "Demo notes" --purpose "scratch" \
   --member sdd-conductor:owner --member council:reader \
-  --context gh:cyberuni/cynapse#12
+  --context gh:spikyuni/cynapse#12
 # created demo-notes  demo.notes  active  4 entries  Demo notes
 ```
 
@@ -83,9 +83,9 @@ cynapse --as sdd-conductor channel create dm-a-b --type cynapse.dm --title "a an
 
 ```bash
 # A work channel for an issue, keyed by its GitHub node_id: running it again returns the same channel
-cynapse --as sdd-conductor channel create gh:cyberuni/cynapse-12 --type demo.issue --title "Issue 12" \
+cynapse --as sdd-conductor channel create gh:spikyuni/cynapse-12 --type demo.issue --title "Issue 12" \
   --store gh --native-id I_kwDOabc123
-# created gh:cyberuni/cynapse-12  demo.issue  active  1 entries  Issue 12
+# created gh:spikyuni/cynapse-12  demo.issue  active  1 entries  Issue 12
 ```
 
 ```bash
@@ -260,7 +260,7 @@ the channel.
 
 ```bash
 cynapse channel resolve --store gh --native-id I_kwDOabc123
-# gh:cyberuni/cynapse-12  demo.issue  active  1 entries  Issue 12
+# gh:spikyuni/cynapse-12  demo.issue  active  1 entries  Issue 12
 ```
 
 ```bash
@@ -289,8 +289,8 @@ cynapse channel add-key <channel> --store <store> --native-id <id>
 **Examples**
 
 ```bash
-cynapse --as sdd-conductor channel add-key gh:cyberuni/cynapse-12 --store gh --native-id I_kwDOnew456
-# gh:cyberuni/cynapse-12 keys: gh I_kwDOabc123, gh I_kwDOnew456
+cynapse --as sdd-conductor channel add-key gh:spikyuni/cynapse-12 --store gh --native-id I_kwDOnew456
+# gh:spikyuni/cynapse-12 keys: gh I_kwDOabc123, gh I_kwDOnew456
 ```
 
 ## `cynapse channel owner`

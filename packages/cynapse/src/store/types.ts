@@ -133,7 +133,7 @@ export interface Channel {
 	purpose?: string
 	parent?: Anchor
 	members: Member[]
-	/** Reference shorthands, such as `gh:cyberuni/cynapse#12`. */
+	/** Reference shorthands, such as `gh:spikyuni/cynapse#12`. */
 	context: string[]
 	traits: ChannelTraits
 	/** The lifecycle state, such as `active`, `paused` or `reconciled`. */

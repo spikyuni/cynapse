@@ -25,7 +25,7 @@ the service of choice, and agents use that service directly. cynapse neither wra
 indexes it.
 
 cynapse refers to outside things by reference. Inside cynapse, a reference is a shorthand
-(`gh:cyberuni/cynapse#12`). When it is posted to another platform, it renders as a Markdown
+(`gh:spikyuni/cynapse#12`). When it is posted to another platform, it renders as a Markdown
 link or a bare URL, whichever that platform supports.
 
 ## Considered options

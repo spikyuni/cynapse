@@ -93,14 +93,14 @@ describe('channels', () => {
 			title: 'Add auth',
 			author: 'alice',
 			members: [{ participant: 'bob', role: 'reviewer' }, { participant: 'carol' }],
-			context: ['gh:cyberuni/cynapse#12'],
+			context: ['gh:spikyuni/cynapse#12'],
 		})
 		expect(channel).toMatchObject({
 			members: [
 				{ participant: 'bob', role: 'reviewer' },
 				{ participant: 'carol', role: 'member' },
 			],
-			context: ['gh:cyberuni/cynapse#12'],
+			context: ['gh:spikyuni/cynapse#12'],
 		})
 		expect(store.entries('auth').map((e) => e.type)).toEqual([
 			'cynapse.channel.created',
@@ -128,14 +128,14 @@ describe('channels', () => {
 	it('writes each metadata change as an entry and reflects it in the briefing', () => {
 		mission()
 		store.addMember('auth', 'bob', 'reviewer', 'alice')
-		store.addContext('auth', 'gh:cyberuni/cynapse#12', 'alice')
+		store.addContext('auth', 'gh:spikyuni/cynapse#12', 'alice')
 		const decision = store.append('auth', { author: 'bob', type: 'sdd.decision', body: 'use JWT' })
 		store.pin(decision.id, 'bob')
 		store.setLifecycle('auth', 'reconciled', 'alice')
 		const brief = store.brief('auth', { as: 'bob' })
 		expect(brief.channel).toMatchObject({
 			members: [{ participant: 'bob', role: 'reviewer', cursor: 0 }],
-			context: ['gh:cyberuni/cynapse#12'],
+			context: ['gh:spikyuni/cynapse#12'],
 			pinned: [decision.seq],
 			state: 'reconciled',
 		})

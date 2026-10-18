@@ -36,7 +36,7 @@ function seedHierarchy(store: MemoryStore) {
 			{ participant: COUNCIL, role: 'owner' },
 			{ participant: 'planner', role: 'planner' },
 		],
-		context: ['gh:cyberuni/cynapse#20'],
+		context: ['gh:spikyuni/cynapse#20'],
 	})
 	store.append('init-identity', {
 		author: COUNCIL,
@@ -84,7 +84,7 @@ function seedHierarchy(store: MemoryStore) {
 					{ participant: 'builder', role: 'builder' },
 					{ participant: 'reviewer', role: 'reviewer' },
 				],
-				context: [`gh:cyberuni/cynapse#${30 + epic.missions.indexOf(mission)}`],
+				context: [`gh:spikyuni/cynapse#${30 + epic.missions.indexOf(mission)}`],
 				conventions: ['sdd.mission-ledger'],
 			})
 			store.defineView(mission, {
@@ -100,7 +100,7 @@ function seedHierarchy(store: MemoryStore) {
 		type: 'sdd.note',
 		body: 'Explored the session middleware; three call sites read the cookie directly.',
 		tags: ['topic:auth'],
-		refs: ['gh:cyberuni/cynapse#31'],
+		refs: ['gh:spikyuni/cynapse#31'],
 	})
 	store.append('m-login', {
 		author: 'builder',
@@ -129,8 +129,8 @@ function seedHierarchy(store: MemoryStore) {
 	store.append('m-login', {
 		author: 'builder',
 		type: 'sdd.outcome',
-		body: 'Login issues tokens. Merged in gh:cyberuni/cynapse#34.',
-		refs: ['gh:cyberuni/cynapse#34'],
+		body: 'Login issues tokens. Merged in gh:spikyuni/cynapse#34.',
+		refs: ['gh:spikyuni/cynapse#34'],
 		tags: ['topic:auth'],
 	})
 	store.pin('m-login', decision.seq)
@@ -243,7 +243,7 @@ function seedTruss(store: MemoryStore) {
 			{ participant: COUNCIL, role: 'owner' },
 			...electorate.map((p) => ({ participant: p, role: 'workflow' })),
 		],
-		context: ['gh:cyberuni/cynapse#40', 'm-login#3'],
+		context: ['gh:spikyuni/cynapse#40', 'm-login#3'],
 	})
 	const contribution = (author: string, artifact: string, body: string) =>
 		store.append('truss-auth', {
@@ -404,12 +404,12 @@ function seedCoordination(store: MemoryStore) {
 		author: 'github',
 		type: 'feed.change',
 		body: 'PR merged: token login.',
-		refs: ['gh:cyberuni/cynapse#34'],
+		refs: ['gh:spikyuni/cynapse#34'],
 	})
 	store.append('changes', {
 		author: 'github',
 		type: 'feed.change',
 		body: 'Issue opened: revocation semantics.',
-		refs: ['gh:cyberuni/cynapse#41'],
+		refs: ['gh:spikyuni/cynapse#41'],
 	})
 }

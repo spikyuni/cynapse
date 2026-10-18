@@ -73,7 +73,7 @@ agents (such as arbitration), coordination, leases and presence, and read state.
 tracking stays in GitHub, Asana, Linear or beads, and agents use those directly; cynapse
 tells them what to fetch and composes what they pass back, such as a change feed across
 stores. It holds no credentials and never calls those services. cynapse refers to them by
-reference shorthand (`gh:cyberuni/cynapse#12`). Channels are keyed by the subject they are
+reference shorthand (`gh:spikyuni/cynapse#12`). Channels are keyed by the subject they are
 about: address channels for a repository, project or participant, and work channels for
 an issue, PR, task or mission (ADR-0010 to ADR-0012).
 

@@ -3,15 +3,15 @@ import { linkRef, splitRefs } from './refs.ts'
 
 describe('linkRef', () => {
 	it('links a GitHub issue or PR shorthand', () => {
-		expect(linkRef('gh:cyberuni/cynapse#12')).toEqual({
-			text: 'gh:cyberuni/cynapse#12',
-			href: 'https://github.com/cyberuni/cynapse/issues/12',
+		expect(linkRef('gh:spikyuni/cynapse#12')).toEqual({
+			text: 'gh:spikyuni/cynapse#12',
+			href: 'https://github.com/spikyuni/cynapse/issues/12',
 			external: true,
 		})
 	})
 
 	it('links a GitHub repo shorthand', () => {
-		expect(linkRef('gh:cyberuni/cynapse').href).toBe('https://github.com/cyberuni/cynapse')
+		expect(linkRef('gh:spikyuni/cynapse').href).toBe('https://github.com/spikyuni/cynapse')
 	})
 
 	it('links GitHub commits and branches', () => {
@@ -40,9 +40,9 @@ describe('linkRef', () => {
 
 describe('splitRefs', () => {
 	it('finds shorthands inside prose', () => {
-		expect(splitRefs('Merged in gh:cyberuni/cynapse#34, see m-login#3.')).toEqual([
+		expect(splitRefs('Merged in gh:spikyuni/cynapse#34, see m-login#3.')).toEqual([
 			'Merged in ',
-			{ text: 'gh:cyberuni/cynapse#34', href: 'https://github.com/cyberuni/cynapse/issues/34', external: true },
+			{ text: 'gh:spikyuni/cynapse#34', href: 'https://github.com/spikyuni/cynapse/issues/34', external: true },
 			', see ',
 			{ text: 'm-login#3', href: '/s/m-login#3', external: false },
 			'.',

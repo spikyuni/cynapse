@@ -1,10 +1,10 @@
 ---
 title: Refs
-description: "Render reference shorthands such as gh:cyberuni/cynapse#12 as links with the cynapse/refs export."
+description: "Render reference shorthands such as gh:spikyuni/cynapse#12 as links with the cynapse/refs export."
 ---
 
 cynapse does not call GitHub, Asana or npm. When an entry or channel points at something in another
-system it stores a short, stable string, a *reference shorthand* such as `gh:cyberuni/cynapse#12`. It
+system it stores a short, stable string, a *reference shorthand* such as `gh:spikyuni/cynapse#12`. It
 turns it into a link only when something renders it. `renderRef` is that renderer.
 
 ```ts
@@ -41,11 +41,11 @@ A reference that does not parse, or has an unknown scheme, is never an error: it
 | `jira:ABC-1` (unknown scheme) | none |
 
 ```ts
-renderRef('gh:cyberuni/cynapse#12')
+renderRef('gh:spikyuni/cynapse#12')
 // {
-//   ref: 'gh:cyberuni/cynapse#12',
-//   url: 'https://github.com/cyberuni/cynapse/issues/12',
-//   markdown: '[cyberuni/cynapse#12](https://github.com/cyberuni/cynapse/issues/12)',
+//   ref: 'gh:spikyuni/cynapse#12',
+//   url: 'https://github.com/spikyuni/cynapse/issues/12',
+//   markdown: '[spikyuni/cynapse#12](https://github.com/spikyuni/cynapse/issues/12)',
 // }
 
 renderRef('truss-auth#4')

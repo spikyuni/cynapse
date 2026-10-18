@@ -135,7 +135,7 @@ function seedWorkHierarchy(w: World): void {
 		['sdd-conductor', 'conductor'],
 		['operator', 'dispatcher'],
 	])
-	w.context('init-agent-comms', 'council', ['gh:cyberuni/cynapse', 'gh:cyberuni/cyberlegion#20'])
+	w.context('init-agent-comms', 'council', ['gh:spikyuni/cynapse', 'gh:cyberuni/cyberlegion#20'])
 	w.post(
 		'init-agent-comms',
 		'council',
@@ -146,7 +146,7 @@ function seedWorkHierarchy(w: World): void {
 	// Epic: persisted store
 	const storeAnchor = w.post('init-agent-comms', 'sdd-conductor', 'sdd.epic.opened', 'Epic: persisted store', {
 		data: { epic: 'epic-store', title: 'Persisted store' },
-		refs: ['gh:cyberuni/cynapse#16'],
+		refs: ['gh:spikyuni/cynapse#16'],
 	})
 	store.createChannel({
 		handle: 'epic-store',
@@ -162,12 +162,12 @@ function seedWorkHierarchy(w: World): void {
 		['pod-store', 'pod'],
 		['council', 'approver'],
 	])
-	w.context('epic-store', 'sdd-conductor', ['gh:cyberuni/cynapse#16'])
+	w.context('epic-store', 'sdd-conductor', ['gh:spikyuni/cynapse#16'])
 
 	// Epic: viewer
 	const viewerAnchor = w.post('init-agent-comms', 'sdd-conductor', 'sdd.epic.opened', 'Epic: Cortex viewer', {
 		data: { epic: 'epic-viewer', title: 'Cortex viewer' },
-		refs: ['gh:cyberuni/cynapse#17'],
+		refs: ['gh:spikyuni/cynapse#17'],
 	})
 	store.createChannel({
 		handle: 'epic-viewer',
@@ -202,7 +202,7 @@ function seedReconciledMission(w: World): void {
 		'Mission: assign seq under the write lock',
 		{
 			data: { mission: 'm-seq-order', cr: 'github-18' },
-			refs: ['gh:cyberuni/cynapse#18'],
+			refs: ['gh:spikyuni/cynapse#18'],
 		},
 	)
 	store.createChannel({
@@ -222,7 +222,7 @@ function seedReconciledMission(w: World): void {
 		['sdd-impl-judge', 'impl-judge'],
 		['council', 'approver'],
 	])
-	w.context(m, 'sdd-conductor', ['gh:cyberuni/cynapse#18', 'gh:cyberuni/cynapse:feat/seq-order'])
+	w.context(m, 'sdd-conductor', ['gh:spikyuni/cynapse#18', 'gh:spikyuni/cynapse:feat/seq-order'])
 
 	w.post(m, 'sdd-conductor', 'sdd.leash', 'Leash auto-spec, derived from blast medium.', {
 		data: { leash: 'auto-spec', by: 'derived', blast: 'medium', approach: ['no-spike', 'worktree'] },
@@ -306,7 +306,7 @@ function seedReconciledMission(w: World): void {
 		'sdd.note',
 		'Implementation up: BEGIN IMMEDIATE + MAX(seq)+1; load test 12 writers × 200 clean.',
 		{
-			refs: ['gh:cyberuni/cynapse#19'],
+			refs: ['gh:spikyuni/cynapse#19'],
 		},
 	)
 	w.post(m, 'sdd-impl-judge', 'sdd.judge', 'Impl: 8/8 scenarios pass; integrity_check ok.', {
@@ -320,11 +320,11 @@ function seedReconciledMission(w: World): void {
 			cause: 'ceiling',
 			why: 'leash auto-spec stops at impl gate',
 		},
-		refs: ['gh:cyberuni/cynapse#19'],
+		refs: ['gh:spikyuni/cynapse#19'],
 	})
 	w.post(m, 'sdd-conductor', 'sdd.followup', 'Backlog: busy_timeout is fixed at 10s; make it configurable per store.', {
 		data: { class: 'backlog' },
-		refs: ['gh:cyberuni/cynapse#21'],
+		refs: ['gh:spikyuni/cynapse#21'],
 	})
 	w.post(
 		m,
@@ -340,7 +340,7 @@ function seedReconciledMission(w: World): void {
 		'sdd-conductor',
 		'cynapse.summary',
 		'Merged as #19. seq assigned under BEGIN IMMEDIATE; monotonic for the channel’s life (Council, compaction). One backlog followup (#21). Scanner recommends a load-test rule.',
-		{ refs: ['gh:cyberuni/cynapse#19'] },
+		{ refs: ['gh:spikyuni/cynapse#19'] },
 	)
 	store.pin(summary.id, 'sdd-conductor')
 	store.pin(decision.id, 'sdd-conductor')
@@ -353,7 +353,7 @@ function seedReconciledMission(w: World): void {
 	w.later(30)
 	store.setLifecycle(m, 'reconciled', 'sdd-scanner')
 	w.post('epic-store', 'sdd-conductor', 'sdd.mission.retired', 'm-seq-order merged (#19) and reconciled.', {
-		refs: [`epic-store#${anchor.seq}`, 'gh:cyberuni/cynapse#19'],
+		refs: [`epic-store#${anchor.seq}`, 'gh:spikyuni/cynapse#19'],
 		parent: anchor.id,
 	})
 	store.markRead(m, 'council')
@@ -364,7 +364,7 @@ function seedPausedMission(w: World): void {
 	const { store } = w
 	const anchor = w.post('epic-store', 'sdd-conductor', 'sdd.mission.opened', 'Mission: channel identity and handles', {
 		data: { mission: 'm-channel-ids', cr: 'github-22' },
-		refs: ['gh:cyberuni/cynapse#22'],
+		refs: ['gh:spikyuni/cynapse#22'],
 	})
 	store.createChannel({
 		handle: 'm-channel-ids',
@@ -382,7 +382,7 @@ function seedPausedMission(w: World): void {
 		['sdd-spec-judge', 'spec-judge'],
 		['council', 'approver'],
 	])
-	w.context(m, 'sdd-conductor', ['gh:cyberuni/cynapse#22'])
+	w.context(m, 'sdd-conductor', ['gh:spikyuni/cynapse#22'])
 	w.post(m, 'sdd-conductor', 'sdd.leash', 'Leash auto-spec.', {
 		data: { leash: 'auto-spec', by: 'derived', blast: 'high', approach: ['spike', 'worktree'] },
 	})
@@ -419,7 +419,7 @@ function seedPausedMission(w: World): void {
 				why: 'per-project or global handle namespace is a Council placement call',
 			},
 			tags: ['council.attention'],
-			refs: ['gh:cyberuni/cynapse#22'],
+			refs: ['gh:spikyuni/cynapse#22'],
 		},
 	)
 	store.setState(
@@ -441,7 +441,7 @@ function seedViewerMission(w: World): void {
 	const { store } = w
 	const anchor = w.post('epic-viewer', 'sdd-conductor', 'sdd.mission.opened', 'Mission: Cortex app shell', {
 		data: { mission: 'm-cortex-shell', cr: 'github-23' },
-		refs: ['gh:cyberuni/cynapse#23'],
+		refs: ['gh:spikyuni/cynapse#23'],
 	})
 	store.createChannel({
 		handle: 'm-cortex-shell',
@@ -464,7 +464,7 @@ function seedViewerMission(w: World): void {
 		data: { gate: 'spec', verdict: 'approve', by: 'agent', cause: 'dimension', provisional: true },
 	})
 	w.post(m, 'pod-viewer', 'sdd.note', 'Building against the store read API agreed on thread cortex-api.', {
-		refs: ['gh:cyberuni/cynapse#23'],
+		refs: ['gh:spikyuni/cynapse#23'],
 	})
 }
 
@@ -486,7 +486,7 @@ function seedMissionGraph(w: World): void {
 		['sdd-conductor', 'reader'],
 		['council', 'observer'],
 	])
-	w.context(g, 'operator', ['gh:cyberuni/cynapse'])
+	w.context(g, 'operator', ['gh:spikyuni/cynapse'])
 
 	const node = (id: string, kind: string, title: string, extra: Record<string, unknown> = {}) =>
 		w.post(g, 'operator', 'sdd.graph.node', `${kind} ${id}: ${title}`, {
@@ -538,10 +538,10 @@ function seedMissionGraph(w: World): void {
 	claim('m-seq-order', 'pod-store')
 	claim('m-refs', 'pod-viewer')
 	w.later(240)
-	retire('m-refs', 'merged', ['gh:cyberuni/cynapse#20'])
+	retire('m-refs', 'merged', ['gh:spikyuni/cynapse#20'])
 	frontier([], { 'm-channel-ids': 'held: RAW predecessor m-seq-order not retired' })
 	w.later(600)
-	retire('m-seq-order', 'merged', ['gh:cyberuni/cynapse#19'])
+	retire('m-seq-order', 'merged', ['gh:spikyuni/cynapse#19'])
 	frontier(['m-channel-ids'], { 'm-channel-ids': 'RAW predecessor m-seq-order retired' })
 	claim('m-channel-ids', 'pod-store')
 	w.post(g, 'operator', 'sdd.graph.node', 'm-dm-dedup: discovered while speccing m-channel-ids', {
@@ -839,7 +839,7 @@ function seedCoordination(w: World): void {
 		handle: 'coord-cynapse',
 		type: 'coord.channel',
 		title: 'cynapse agents',
-		purpose: 'Who is working on what in cyberuni/cynapse; claims, leases and handoffs.',
+		purpose: 'Who is working on what in spikyuni/cynapse; claims, leases and handoffs.',
 		author: 'operator',
 		traits: { membership: 'open', wake: false },
 	})
@@ -893,7 +893,7 @@ function seedCoordination(w: World): void {
 		'coord.handoff',
 		'Store API pushed; the viewer can switch from its fixture to the real import.',
 		{
-			refs: ['gh:cyberuni/cynapse:feat/prototype-core'],
+			refs: ['gh:spikyuni/cynapse:feat/prototype-core'],
 		},
 	)
 }
@@ -903,7 +903,7 @@ function seedFeed(w: World): void {
 	store.createChannel({
 		handle: 'feed-cynapse',
 		type: 'feed.changes',
-		title: 'cyberuni/cynapse changes',
+		title: 'spikyuni/cynapse changes',
 		purpose: 'Trunk moves, CI results and releases, for agents to react to.',
 		author: 'git-watch',
 		traits: { membership: 'open', wake: true, retention: '30d' },
@@ -917,25 +917,25 @@ function seedFeed(w: World): void {
 		['council', 'subscriber'],
 	])
 	w.post(f, 'git-watch', 'feed.main.moved', 'main moved to 0c173b2: docs(research) (#14)', {
-		refs: ['gh:cyberuni/cynapse@0c173b2', 'gh:cyberuni/cynapse#14'],
+		refs: ['gh:spikyuni/cynapse@0c173b2', 'gh:spikyuni/cynapse#14'],
 		data: { from: 'eb01016', to: '0c173b2' },
 	})
 	w.post(f, 'ci', 'feed.ci.failed', 'CI failed on feat/seq-order: knip found an unused export.', {
-		refs: ['gh:cyberuni/cynapse#19'],
+		refs: ['gh:spikyuni/cynapse#19'],
 		data: { branch: 'feat/seq-order', job: 'verify' },
 		tags: ['ci.lint'],
 	})
 	w.post(f, 'ci', 'feed.ci.passed', 'CI green on feat/seq-order.', {
-		refs: ['gh:cyberuni/cynapse#19'],
+		refs: ['gh:spikyuni/cynapse#19'],
 		data: { branch: 'feat/seq-order' },
 	})
 	store.markRead(f, 'council')
 	w.post(f, 'git-watch', 'feed.main.moved', 'main moved to 5d4e3f2: feat: assign seq under the write lock (#19)', {
-		refs: ['gh:cyberuni/cynapse@5d4e3f2', 'gh:cyberuni/cynapse#19'],
+		refs: ['gh:spikyuni/cynapse@5d4e3f2', 'gh:spikyuni/cynapse#19'],
 		data: { from: '0c173b2', to: '5d4e3f2' },
 	})
 	w.post(f, 'ci', 'feed.ci.failed', 'CI failed on main: flaky load test timeout on the macOS runner.', {
-		refs: ['gh:cyberuni/cynapse@5d4e3f2'],
+		refs: ['gh:spikyuni/cynapse@5d4e3f2'],
 		data: { branch: 'main', job: 'test' },
 		tags: ['ci.flaky', 'council.attention'],
 	})

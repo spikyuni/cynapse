@@ -104,5 +104,5 @@ built, and its technology isn't chosen. An offline writer's entries would wait w
 - [Guarantees and limits](/cynapse/concepts/guarantees/)
 - CLI: [global options](/cynapse/cli/) (`--db`), [`dev load-test`](/cynapse/cli/dev/)
 - API: [`openStore`](/cynapse/api/store/#opening-a-store)
-- Decision: [ADR-0007](https://github.com/cyberuni/cynapse/blob/main/docs/adr/0007-stock-sqlite-outside-the-repository.md),
+- Decision: [ADR-0007](https://github.com/spikyuni/cynapse/blob/main/docs/adr/0007-stock-sqlite-outside-the-repository.md),
   which also records the options rejected

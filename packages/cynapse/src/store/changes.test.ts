@@ -80,7 +80,7 @@ describe('changes', () => {
 		let { token } = store.changes()
 		const moves: [string, () => unknown][] = [
 			['member', () => store.addMember('a', 'bob', 'reviewer', 'alice')],
-			['context', () => store.addContext('a', 'gh:cyberuni/cynapse#30', 'alice')],
+			['context', () => store.addContext('a', 'gh:spikyuni/cynapse#30', 'alice')],
 			['pin', () => store.pin(entry.id, 'alice')],
 			['lifecycle', () => store.setLifecycle('a', 'paused', 'alice')],
 			['view', () => store.defineView('a', 'notes', { types: ['test.note'] }, 'alice')],

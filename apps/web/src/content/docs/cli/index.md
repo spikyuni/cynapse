@@ -66,7 +66,7 @@ globally stable name; `handle#seq` is the readable one. See
 [Channels](/cynapse/concepts/channels/) and [Entries](/cynapse/concepts/entries/).
 
 Context and `--ref` values are different: they are free-form [reference shorthands](/cynapse/api/refs/)
-such as `gh:cyberuni/cynapse#12`, stored as written.
+such as `gh:spikyuni/cynapse#12`, stored as written.
 
 ## Output
 

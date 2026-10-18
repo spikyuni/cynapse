@@ -54,7 +54,7 @@ The package also has two entry points of its own, `cynapse/refs` (`renderRef` an
 | `timestampOf` | The millisecond timestamp in a UUIDv7. |
 | `isUuid` | Whether a string is a UUID. |
 | `CYNAPSE_NAMESPACE` | The fixed UUIDv5 namespace every derived id uses. |
-| `renderRef` | Renders a reference shorthand, such as `gh:cyberuni/cynapse#12`, as a link. |
+| `renderRef` | Renders a reference shorthand, such as `gh:spikyuni/cynapse#12`, as a link. |
 | `CynapseError` | The error the CLI and the store raise on purpose, with `exitCode`, `code`, `details` and `help`. |
 | `errorCodeFor` | The `code` string for any thrown value. |
 | `exitCodeFor` | The exit code for any thrown value. |

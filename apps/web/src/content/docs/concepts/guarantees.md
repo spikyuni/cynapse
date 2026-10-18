@@ -159,7 +159,7 @@ account for gets the generic help line that suggests reporting a bug.
   else; references to them are strings.
 - **It doesn't expire anything.** There are no leases, time-to-live values or retention
   rules yet.
-- **It doesn't edit entries.** A correction is a new entry ([#62](https://github.com/cyberuni/cynapse/issues/62)
+- **It doesn't edit entries.** A correction is a new entry ([#62](https://github.com/spikyuni/cynapse/issues/62)
   proposes edits).
 - **It doesn't search text.** Filters match type, tag, author and position, not the body.
 

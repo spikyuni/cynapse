@@ -2,7 +2,7 @@
 
 ## Status
 
-Accepted, 2026-10-06. Answers [#60](https://github.com/cyberuni/cynapse/issues/60). Built.
+Accepted, 2026-10-06. Answers [#60](https://github.com/spikyuni/cynapse/issues/60). Built.
 
 ## Context
 

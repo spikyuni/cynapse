@@ -71,7 +71,7 @@ channel. So cleanup marks the channel `reconciled` and doesn't delete it.
 ### Deleting a channel
 
 Deleting is for removing what was said, such as a secret pasted into a channel, or a
-channel nobody wants any more ([ADR-0014](https://github.com/cyberuni/cynapse/blob/main/docs/adr/0014-deleting-entries-and-channels.md)).
+channel nobody wants any more ([ADR-0014](https://github.com/spikyuni/cynapse/blob/main/docs/adr/0014-deleting-entries-and-channels.md)).
 It was added after 0.1.0.
 `deleteChannel` erases every entry outside `cynapse.*`, leaving
 [tombstones](/cynapse/concepts/entries/#deleting-an-entry), and moves the channel to the
@@ -101,7 +101,7 @@ What the design adds on top, not built yet:
 
 Leases are designed and not built: state records with a time to live, an exclusive flag,
 path patterns, a release time, and a way to repair orphaned leases
-([ADR-0006](https://github.com/cyberuni/cynapse/blob/main/docs/adr/0006-state-views-and-lifecycle.md)).
+([ADR-0006](https://github.com/spikyuni/cynapse/blob/main/docs/adr/0006-state-views-and-lifecycle.md)).
 Until they exist, nothing expires and nothing is exclusive. Leases are for coordination,
 such as who holds a task or a file. They are not how a session's liveness is tracked: a
 runtime asserts that itself
@@ -111,4 +111,4 @@ runtime asserts that itself
 
 - CLI: [`state`](/cynapse/cli/state/)
 - API: [`StateRecord`](/cynapse/api/types/), [`Store.setState`](/cynapse/api/store/)
-- Decision: [ADR-0006](https://github.com/cyberuni/cynapse/blob/main/docs/adr/0006-state-views-and-lifecycle.md)
+- Decision: [ADR-0006](https://github.com/spikyuni/cynapse/blob/main/docs/adr/0006-state-views-and-lifecycle.md)

@@ -6,7 +6,7 @@ description: Register, retire, rename and resolve participants, and list them fo
 A [participant](/cynapse/concepts/participants/) registered by a unit has an id derived from a key, a
 status (`live` or `retired`), and an **address channel** keyed by its id and owned by it. Every
 registration, retirement and rename is an entry in that channel, so the participant's history reads
-like any other channel's ([ADR-0013](https://github.com/cyberuni/cynapse/blob/main/docs/adr/0013-messaging-between-participants.md)).
+like any other channel's ([ADR-0013](https://github.com/spikyuni/cynapse/blob/main/docs/adr/0013-messaging-between-participants.md)).
 
 `<participant>` arguments take a participant id.
 
