@@ -16,7 +16,7 @@
 		"typecheck": "turbo run typecheck",
 		"verify": "pnpm check && turbo run build typecheck test && pnpm knip",
 		"version": "changeset version && node scripts/sync-plugin-version.mjs",
-		"web": "turbo run --filter=@cyberuni/web"
+		"web": "turbo run --filter=website"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^2.5.7",

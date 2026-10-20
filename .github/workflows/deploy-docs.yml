@@ -27,7 +27,7 @@ jobs:
           node-version: 24
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - run: pnpm --filter @cyberuni/web build
+      - run: pnpm --filter website build
       - uses: actions/configure-pages@v6
       - uses: actions/upload-pages-artifact@v5
         with:

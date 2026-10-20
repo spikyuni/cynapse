@@ -4,7 +4,7 @@ Guidance for the docs site. The repo-wide rules in the root `AGENTS.md` still ap
 
 ## What This Is
 
-`@cyberuni/web` — the Astro + Starlight documentation site, deployed to GitHub Pages.
+`website` — the Astro + Starlight documentation site, deployed to GitHub Pages.
 `base` is `/cynapse`, so the dev server serves pages under that prefix too
 (`http://localhost:4321/cynapse/...`), not at the root.
 
