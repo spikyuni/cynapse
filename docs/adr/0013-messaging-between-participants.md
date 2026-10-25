@@ -22,8 +22,8 @@ every candidate an ambiguity lists can still be addressed. `ambiguous_address` e
 
 A runtime that launches and manages agent sessions, cyberlegion first, keeps its own
 messaging between those sessions and the people directing them. The settled decisions in
-AGENTS.md say messaging belongs in cynapse, that cynapse owns participant addressing,
-identity and presence, and that units register their participants with cynapse, never the
+AGENTS.md say messaging belongs in cynapse, that cynapse owns participant addressing
+and identity, and that units register their participants with cynapse, never the
 reverse. Issue #30 lists ten needs from that runtime and asks which fit cynapse's model,
 which need new concepts, and which belong elsewhere.
 
@@ -192,10 +192,11 @@ with `kind: human`, with their own address channel, their own cursors, and their
 "owner" of an address channel is per channel, not global.
 
 **8. Registering participants. New concept: participant lifecycle, written as entries.**
-See *Registration surface* below. **Session liveness is asserted by the runtime, never
-measured by cynapse.** It is a status, `live` or `retired`, and the resolver ignores
-retired participants. A retired participant is never deleted, because entries name it as
-their author. A runtime that crashes without retiring its sessions reconciles when it
+See *Registration surface* below. **Registration is asserted by the runtime, and cynapse
+never measures whether a session is alive.** It is a status, `live` or `retired`, meaning
+registered and addressable, not running now, and the resolver ignores retired
+participants. A retired participant is never deleted, because entries name it as their
+author. A runtime that crashes without retiring its sessions reconciles when it
 starts: it lists what it registered, and retires what it no longer runs. Only the runtime
 can tell whether a session is alive, because only it runs the session.
 

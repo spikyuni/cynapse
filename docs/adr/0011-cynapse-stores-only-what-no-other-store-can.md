@@ -4,7 +4,8 @@
 
 Accepted, 2026-10-03. Not built yet. Supersedes the Decision section of
 [ADR-0002](0002-own-only-communication-with-no-other-home.md); its context and rejected
-options still stand.
+options still stand. Presence is no longer stored here: the runtime owns it
+([ADR-0013](0013-messaging-between-participants.md) §8).
 
 ## Context
 

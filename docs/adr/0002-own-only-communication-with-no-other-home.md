@@ -2,7 +2,8 @@
 
 ## Status
 
-Accepted, 2026-09-30.
+Accepted, 2026-09-30. Presence is no longer stored here: the runtime owns it
+([ADR-0013](0013-messaging-between-participants.md) §8).
 
 ## Context
 

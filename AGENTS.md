@@ -69,7 +69,7 @@ per [cyberuni/cyberlegion#20](https://github.com/cyberuni/cyberlegion/issues/20)
 can be depended on as a peer rather than living inside just one unit.
 
 It stores only what no other store can: ledgers of what happened, discussions between
-agents (such as arbitration), coordination, leases and presence, and read state. Work
+agents (such as arbitration), coordination, leases, and read state. Work
 tracking stays in GitHub, Asana, Linear or beads, and agents use those directly; cynapse
 tells them what to fetch and composes what they pass back, such as a change feed across
 stores. It holds no credentials and never calls those services. cynapse refers to them by
@@ -84,8 +84,9 @@ Ships as an npm package:
 
 ### Settled decisions
 
-- **cynapse owns participant addressing and identity** — addresses, standing/owner
-  identity, and presence. Units — cyberlegion, and any future cyber-hive — register
+- **cynapse owns participant addressing and identity** — addresses and standing/owner
+  identity. Presence, whether a session is alive, belongs to the runtime
+  ([ADR-0013](docs/adr/0013-messaging-between-participants.md) §8). Units — cyberlegion, and any future cyber-hive — register
   their participants with cynapse; cynapse does not register with them.
 - **cyber-mux stays below cynapse.** It is pane mechanics, not messaging.
 
