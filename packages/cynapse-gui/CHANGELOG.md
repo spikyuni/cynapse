@@ -1,5 +1,23 @@
 # @cyberuni/cynapse-gui
 
+## 0.1.1
+
+### Patch Changes
+
+- 68b25c7: Point `repository`, `homepage` and the plugin manifests at `spikyuni/cynapse`, where the repo now lives.
+  
+  Rename the viewer package from `@spikyuni/cynapse-gui` to `@spikyuni/cynapse-gui`. `cynapse gui` now loads the new name, so install `@spikyuni/cynapse-gui` next to cynapse.
+- Updated dependencies [bb68d01]
+- Updated dependencies [6f0fcec]
+- Updated dependencies [1c7a347]
+- Updated dependencies [6ac15b1]
+- Updated dependencies [ace6650]
+- Updated dependencies [68b25c7]
+- Updated dependencies [518cbf1]
+- Updated dependencies [4589877]
+- Updated dependencies [080a78b]
+  - cynapse@0.2.0
+
 ## 0.1.0
 
 ### Minor Changes
