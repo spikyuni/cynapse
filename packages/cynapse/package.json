@@ -15,7 +15,8 @@
 		"plugin.json",
 		".claude-plugin",
 		".cursor-plugin",
-		".codex-plugin"
+		".codex-plugin",
+		"CHANGELOG.md"
 	],
 	"type": "module",
 	"exports": {
