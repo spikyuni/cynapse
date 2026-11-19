@@ -235,8 +235,8 @@ importers:
   packages/cynapse-gui:
     dependencies:
       '@hono/node-server':
-        specifier: ^2.1.1
-        version: 2.1.1(hono@4.13.10)
+        specifier: ^2.1.6
+        version: 2.1.6(hono@4.13.10)
       hono:
         specifier: ^4.13.10
         version: 4.13.10
@@ -885,11 +885,11 @@ packages:
   '@expressive-code/plugin-text-markers@0.44.2':
     resolution: {integrity: sha512-SNI7EgUSiADqbqUzzMbj1ZeC/r2pa5eg3KyFOGAd3a7EsIA4qzjXQLp+ODWQtHVDKFCdGs4J3ovSJUqvKIK96g==}
 
-  '@hono/node-server@2.1.1':
-    resolution: {integrity: sha512-ELuehkj5VCBdgEw9zs+ivkKwyzzUCSQuE96YmiPvn1ECBoZCczbFXJLeEGMTYjphP6gydh4pHMqEYPVMYUVgQg==}
+  '@hono/node-server@2.1.6':
+    resolution: {integrity: sha512-p/KH9MnfNcsm3sR6x4lNgm5j+QN4Et8srKredl9DZfXiyZ1UQ3aQ2YVpFLbqktYN5JI+DB+VZFKM2PqE5hLKjQ==}
     engines: {node: '>=20'}
     peerDependencies:
-      hono: ^4
+      hono: ^4 || ^5.0.0-0
 
   '@img/colour@1.1.0':
     resolution: {integrity: sha512-Td76q7j57o/tLVdgS746cYARfSyxk8iEfRxewL9h4OMzYhbW4TAcppl0mT4eyqXddh6L/jwoM75mo7ixa/pCeQ==}
@@ -4096,7 +4096,7 @@ snapshots:
     dependencies:
       '@expressive-code/core': 0.44.2
 
-  '@hono/node-server@2.1.1(hono@4.13.10)':
+  '@hono/node-server@2.1.6(hono@4.13.10)':
     dependencies:
       hono: 4.13.10
 
